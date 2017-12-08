@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为UserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.yijiupi.login_boot.dao.UserMapper">
+
+    <select id="login" parameterType="com.yijiupi.login_boot.pojo.UserPO" resultType="com.yijiupi.login_boot.pojo.UserPO">
+        SELECT userid,username,password FROM userinfo WHERE username=#{loginName} AND password=#{password}
+    </select>
+
+    <insert id="register" parameterType="com.yijiupi.login_boot.pojo.UserPO">
+        INSERT INTO userinfo(username, password) VALUES (#{userName},#{password})
+    </insert>
+
+    <select id="checkUser" parameterType="com.yijiupi.login_boot.pojo.UserPO" resultType="com.yijiupi.login_boot.pojo.UserPO">
+        SELECT userid,username,password FROM userinfo WHERE username=#{userName} AND password=#{password}
+    </select>
+</mapper>

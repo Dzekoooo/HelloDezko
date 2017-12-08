@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>注册页面</title>
+</head>
+<body>
+<h1>注册页面</h1>
+<form name = "register" action="/user/register" method="post">
+    <table>
+        <tr>
+            <td>
+                用户名：
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" required="required"  name="name"/>
+            </td>
+            <td>
+                用户名必须在3-8位之间
+            </td>
+        </tr>
+        <tr>
+            <td>
+                密码：
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="password" required="required"  name="userPass"/>
+            </td>
+            <td>
+                密码必须在3-8位之间
+            </td>
+        </tr>
+        <tr>
+            <td>
+                密码确认：
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="password"  required="required" name="userPass1"/>
+            </td>
+            <td>
+                两次密码必须一致
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="提交"/>
+            </td>
+        </tr>
+    </table>
+</form>
+<a href="login.jsp">已有账号？立即登录</a>
+</body>
+</html>
